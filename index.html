@@ -12,6 +12,33 @@
         Esta é a página principal tem código JavaScript nela. Você só verá o
         resultado no console e durante a depuração.
       </p>
+      <script>
+        console.log("Hello world!");
+        const joao = {
+          qtd: 1,
+          tipo: "maçã",
+        };
+        const maria = {
+          qtd: 2,
+          tipo: "maçã",
+        };
+
+        deJoaoParaMaria();
+        deMariaParaJoao();
+
+        function deJoaoParaMaria() {
+          if (joao.tipo === maria.tipo) {
+            maria.qtd = maria.qtd + joao.qtd;
+            joao.qtd = 0;
+          }
+        }
+        function deMariaParaJoao() {
+          if (maria.tipo === joao.tipo) {
+            joao.qtd = joao.qtd + maria.qtd;
+            maria.qtd = 0;
+          }
+        }
+      </script>
     </main>
   </body>
 </html>
